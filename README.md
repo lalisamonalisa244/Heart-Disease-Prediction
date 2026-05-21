@@ -1,2 +1,87 @@
 # Heart-Disease-Prediction
-A model trained with various featured variables or common symptoms and conditions related to heart disease to make predictions. Predicting the presence or absence of heart disease is a classification problem that uses logistic regression which gives an output of either a yes or no. This model has a decent accuracy making it prediction realistic.
+A model trained with various featured variables or common symptoms and conditions related to heart disease to make predictions. Predicting the presence or absence of heart disease is a classification problem that uses logistic regression which gives an output of either a yes or no. This model has a decent accuracy making it prediction close to reality.
+
+I got a heart disease dataset from kaggle, then check for the columns with null, infinity and duplicated values using pandas to ensure it is clean. Then, I saved it in a CSV file using pandas.
+
+Checking for correlation between the featured and target varibles is really essential not because it would cause any problem but to ensure accuracy and make the model's prediction be realistic as possible. I plotted a scatter plot and a bar plot between each featured variable and the target variable which is known as heart disease in the dataset to visualize the correlation before i imported pearsonr from scipy to calculate the correlation. Although, the correlations are very low and the graphs do not show any correlations between the variables, I sought out for additional information by researching if whether a particular variable signifacantly causes heart disease and to surprise, everything does. I also checked for the P_values which checks the probability of a feartured varible appearing out of random and the probabilities for each featured varibles are very low signifying that the conditions causing heart disease listed as the featured variables are less likely to appear out of random.
+
+Some of the featured variables are categorical but logistic regression can only work with numbers. So to avoid problem that can be caused by manual labelling, I used one-hot-encoding to convert the categorical variable into multiple binary columns so that the machine learning models do not assume any false numerical relationship between the categories, then I saved the encoded dataset in a CSV file and checked the number of the columns and rows.
+
+The model was trained with the logistic regression model using the hyparameters from the encoded dataset, then data were split into training, testing and validation set. Stratify was used for the validation set to deal with the class imbalance in the target variable. Then, I scaled the features to keep the featured variables within the same range. The test sample was used for prediction and the accuracy of the model was tested with the target variable testing dataset and the predicted variable to check how accurate the model will give predictions. 
+
+The confusion report after the checking the accuracy is used as a 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
